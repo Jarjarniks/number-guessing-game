@@ -6,6 +6,16 @@ html {
     box-sizing: inherit;
 }
 
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 .green {
     color: white;
     background-color: green;
