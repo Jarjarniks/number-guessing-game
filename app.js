@@ -52,7 +52,10 @@ const gameStates = {
         numGuesses = 1;
         numberToGuess = Math.floor(Math.random() * 100) + 1;
         console.log(numberToGuess);
-        prevGuessesMsg.textContent = ""
+        prevGuessesMsg.textContent = "";
+        while (guessList.firstChild) {
+            guessList.removeChild(guessList.firstChild);
+        }
     },
     notANumber: function() {
         console.log('i fired')
