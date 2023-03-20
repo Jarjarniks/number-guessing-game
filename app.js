@@ -26,6 +26,11 @@ function checkGuess() {
 }
 
 guessSubmit.addEventListener("click", checkGuess)
+guessField.addEventListener("keypress", event => {
+    if (event.key === "Enter") {
+        checkGuess();
+    }
+})
 
 const gameStates = {
     correctGuess: function() {
