@@ -17,7 +17,7 @@ function checkGuess() {
     /* add check for more than 10 guesses */
 
     if (numGuesses > 10) {
-        console.log('you lose!')
+        console.log('you lost');
     } else if (userGuess === numberToGuess) {
         gameStates.correctGuess()
     } else {
@@ -55,7 +55,7 @@ const gameStates = {
         }
     },
     loseGame: function() {
-
+        
     },
     resetGame: function() {
         numGuesses = 1;
@@ -70,3 +70,24 @@ const gameStates = {
         resultParas.removeChild(resultParas.lastChild);
     },
 }
+
+function resetBtn() {
+    const resetButton = document.createElement("button")
+    resetButton.textContent = "Reset game";
+    resetButton.classList.add("resetBtn");
+    resetButton.addEventListener('click', gameStates.resetGame);
+}
+
+/* working correctGuess
+        const newLi = document.createElement('li');
+        newLi.textContent = `${currentGuess}`;
+        newLi.className = 'green'
+        guessList.appendChild(newLi);
+        latestGuess.textContent = `You guessed right! The correct number was ${currentGuess}`
+        lowOrHi.textContent = `It took you ${numGuesses} guesses!`
+        const resetButton = document.createElement("button")
+        resetButton.textContent = "Reset game";
+        resetButton.classList.add("resetBtn");
+        resultParas.appendChild(resetButton);
+        resetButton.addEventListener('click', gameStates.resetGame); 
+        */
