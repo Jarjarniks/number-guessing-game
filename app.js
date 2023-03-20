@@ -58,6 +58,7 @@ const gameStates = {
         }
         latestGuess.textContent = "";
         lowOrHi.textContent = "";
+        resultParas.removeChild(resultParas.lastChild);
     },
     notANumber: function() {
         console.log('i fired')
