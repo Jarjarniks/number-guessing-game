@@ -13,6 +13,7 @@ let currentGuess;
 function checkGuess() {
     const userGuess = Number(guessField.value)
     currentGuess = userGuess; 
+
     if (userGuess === numberToGuess) {
         gameStates.correctGuess()
     } else {
@@ -54,5 +55,8 @@ const gameStates = {
         <p class="latestGuess"></p>
         <p class="lowOrHi"></p>`
         
+    },
+    notANumber: function() {
+        console.log('i fired')
     }
 }
