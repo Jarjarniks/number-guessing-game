@@ -6,7 +6,7 @@ const guessList = document.querySelector(".guessList");
 const latestGuess = document.querySelector(".latestGuess");
 const lowOrHi = document.querySelector(".lowOrHi");
 
-const numberToGuess = Math.floor(Math.random() * 100) + 1;
+let numberToGuess = Math.floor(Math.random() * 100) + 1;
 console.log(numberToGuess);
 let numGuesses = 1;
 let currentGuess;
@@ -50,11 +50,14 @@ const gameStates = {
     },
     resetGame: function() {
         numGuesses = 1;
+        numberToGuess = Math.floor(Math.random() * 100) + 1;
+        console.log(numberToGuess);
         resultParas.innerHTML = 
         `<p class="prevGuessesMsg"></p>
         <ul class="guessList"></ul>
         <p class="latestGuess"></p>
         <p class="lowOrHi"></p>`
+
     },
     notANumber: function() {
         console.log('i fired')
