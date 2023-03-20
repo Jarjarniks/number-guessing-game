@@ -36,11 +36,7 @@ const gameStates = {
         guessList.appendChild(newLi);
         latestGuess.textContent = `You guessed right! The correct number was ${currentGuess}`
         lowOrHi.textContent = `It took you ${numGuesses} guesses!`
-        const resetButton = document.createElement("button")
-        resetButton.textContent = "Reset game";
-        resetButton.classList.add("resetBtn");
-        resultParas.appendChild(resetButton);
-        resetButton.addEventListener('click', gameStates.resetGame);
+        resultParas.appendChild(resetBtn());
     },
     wrongGuess: function() {
         prevGuessesMsg.textContent = 'Your previous guesses were:'
@@ -76,6 +72,7 @@ function resetBtn() {
     resetButton.textContent = "Reset game";
     resetButton.classList.add("resetBtn");
     resetButton.addEventListener('click', gameStates.resetGame);
+    return resetButton;
 }
 
 /* working correctGuess
