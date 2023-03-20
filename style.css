@@ -36,6 +36,10 @@ h1 {
     margin-bottom: 2rem;
 }
 
+.hidden {
+    display: none;
+}
+
 .green {
     color: white;
     background-color: green;
