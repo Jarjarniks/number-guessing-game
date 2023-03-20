@@ -56,6 +56,8 @@ const gameStates = {
         while (guessList.firstChild) {
             guessList.removeChild(guessList.firstChild);
         }
+        latestGuess.textContent = "";
+        lowOrHi.textContent = "";
     },
     notANumber: function() {
         console.log('i fired')
