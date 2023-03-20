@@ -7,6 +7,7 @@ const latestGuess = document.querySelector(".latestGuess");
 const lowOrHi = document.querySelector(".lowOrHi");
 
 const numberToGuess = Math.floor(Math.random() * 100) + 1;
+console.log(numberToGuess);
 let numGuesses = 1;
 let currentGuess;
 
@@ -54,7 +55,6 @@ const gameStates = {
         <ul class="guessList"></ul>
         <p class="latestGuess"></p>
         <p class="lowOrHi"></p>`
-        
     },
     notANumber: function() {
         console.log('i fired')
