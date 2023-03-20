@@ -63,19 +63,4 @@ const gameStates = {
         lowOrHi.textContent = "";
         resultParas.removeChild(resultParas.lastChild);
     },
-    notANumber: function() {
-        console.log('i fired')
-    }
 }
-
-/*  const userGuess = Number(guessField.value)
-    currentGuess = userGuess; 
-
-    if (userGuess === numberToGuess) {
-        gameStates.correctGuess()
-    } else {
-        gameStates.wrongGuess()
-    }
-    numGuesses++; 
-    working checkGuess function
-    */
