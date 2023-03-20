@@ -54,6 +54,9 @@ const gameStates = {
             lowOrHi.textContent = `You guessed too high!`
         }
     },
+    loseGame: function() {
+
+    },
     resetGame: function() {
         numGuesses = 1;
         numberToGuess = Math.floor(Math.random() * 100) + 1;
