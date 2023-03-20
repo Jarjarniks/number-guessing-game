@@ -57,6 +57,7 @@ const gameStates = {
     },
     loseGame: function() {
         resultParas.appendChild(resetBtn());
+        toggleInputs();
     },
     resetGame: function() {
         numGuesses = 1;
