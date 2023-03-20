@@ -69,6 +69,7 @@ const gameStates = {
         latestGuess.textContent = "";
         lowOrHi.textContent = "";
         resultParas.removeChild(resultParas.lastChild);
+        toggleInputs();
     },
 }
 
