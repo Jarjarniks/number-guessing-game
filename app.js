@@ -7,19 +7,18 @@ const latestGuess = document.querySelector(".latestGuess");
 const lowOrHi = document.querySelector(".lowOrHi");
 
 const numberToGuess = Math.floor(Math.random() * 100) + 1;
-let numGuesses = 0;
+let numGuesses = 1;
 let currentGuess;
 
 function checkGuess() {
-    numGuesses++
     const userGuess = Number(guessField.value)
-    currentGuess = userGuess;
-
+    currentGuess = userGuess; 
     if (userGuess === numberToGuess) {
         gameStates.correctGuess()
     } else {
         gameStates.wrongGuess()
     }
+    numGuesses++;
 }
 
 guessSubmit.addEventListener("click", checkGuess)
