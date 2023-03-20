@@ -48,7 +48,7 @@ const gameStates = {
         }
     },
     resetGame: function() {
-        numGuesses = 0;
+        numGuesses = 1;
         resultParas.innerHTML = 
         `<p class="prevGuessesMsg"></p>
         <ul class="guessList"></ul>
