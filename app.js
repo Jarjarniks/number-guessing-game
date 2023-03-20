@@ -25,12 +25,12 @@ function checkGuess() {
     numGuesses++;
 }
 
-guessSubmit.addEventListener("click", checkGuess)
+guessSubmit.addEventListener("click", checkGuess);
 guessField.addEventListener("keypress", event => {
     if (event.key === "Enter") {
         checkGuess();
     }
-})
+});
 
 const gameStates = {
     correctGuess: function() {
@@ -41,6 +41,7 @@ const gameStates = {
         latestGuess.textContent = `You guessed right! The correct number was ${currentGuess}`
         lowOrHi.textContent = `It took you ${numGuesses} guesses!`
         resultParas.appendChild(resetBtn());
+        disableInputs();
     },
     wrongGuess: function() {
         prevGuessesMsg.textContent = 'Your previous guesses were:'
@@ -77,4 +78,9 @@ function resetBtn() {
     resetButton.classList.add("resetBtn");
     resetButton.addEventListener('click', gameStates.resetGame);
     return resetButton;
+}
+
+function disableInputs() {
+    guessField.disabled = true;
+    guessSubmit.disabled = true;
 }
