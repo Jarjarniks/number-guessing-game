@@ -23,6 +23,7 @@ function checkGuess() {
         gameStates.wrongGuess()
     }
     numGuesses++;
+    resultParas.classList.remove('hidden');
     guessField.value = "";
 }
 
