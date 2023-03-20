@@ -23,6 +23,7 @@ function checkGuess() {
         gameStates.wrongGuess()
     }
     numGuesses++;
+    guessField.value = "";
 }
 
 guessSubmit.addEventListener("click", checkGuess);
