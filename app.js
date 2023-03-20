@@ -56,6 +56,8 @@ const gameStates = {
         }
     },
     loseGame: function() {
+        lowOrHi.textContent = `Oops, you exceeded the guess limit!
+        better luck next time!`
         resultParas.appendChild(resetBtn());
         toggleInputs();
     },
