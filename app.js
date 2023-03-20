@@ -52,12 +52,7 @@ const gameStates = {
         numGuesses = 1;
         numberToGuess = Math.floor(Math.random() * 100) + 1;
         console.log(numberToGuess);
-        resultParas.innerHTML = 
-        `<p class="prevGuessesMsg"></p>
-        <ul class="guessList"></ul>
-        <p class="latestGuess"></p>
-        <p class="lowOrHi"></p>`
-
+        prevGuessesMsg.textContent = ""
     },
     notANumber: function() {
         console.log('i fired')
