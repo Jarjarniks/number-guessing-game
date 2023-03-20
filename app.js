@@ -27,6 +27,10 @@ guessSubmit.addEventListener("click", checkGuess)
 
 const gameStates = {
     correctGuess: function() {
+        const newLi = document.createElement('li');
+        newLi.textContent = `${currentGuess}`;
+        newLi.className = 'green'
+        guessList.appendChild(newLi);
         latestGuess.textContent = `You guessed right! The correct number was ${currentGuess}`
         lowOrHi.textContent = `It took you ${numGuesses} guesses!`
         const resetButton = document.createElement("button")
@@ -34,7 +38,6 @@ const gameStates = {
         resetButton.classList.add("resetBtn");
         resultParas.appendChild(resetButton);
         resetButton.addEventListener('click', gameStates.resetGame);
-        /* add correct guess to guessList, and make its color green */
     },
     wrongGuess: function() {
         prevGuessesMsg.textContent = 'Your previous guesses were:'
