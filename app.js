@@ -41,7 +41,7 @@ const gameStates = {
         latestGuess.textContent = `You guessed right! The correct number was ${currentGuess}`
         lowOrHi.textContent = `It took you ${numGuesses} guesses!`
         resultParas.appendChild(resetBtn());
-        disableInputs();
+        toggleInputs();
     },
     wrongGuess: function() {
         prevGuessesMsg.textContent = 'Your previous guesses were:'
@@ -80,7 +80,16 @@ function resetBtn() {
     return resetButton;
 }
 
-function disableInputs() {
-    guessField.disabled = true;
+function toggleInputs() {
+    
+    if (!guessField.disabled) {
+        guessField.disabled = true;
+        console.log('i fired')
+    } else {
+        guessField.disabled = false;
+        console.log('no i fired')
+    }
+
+
     guessSubmit.disabled = true;
 }
