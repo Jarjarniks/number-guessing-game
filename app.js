@@ -82,15 +82,15 @@ function resetBtn() {
 }
 
 function toggleInputs() {
-    
     if (!guessField.disabled) {
         guessField.disabled = true;
-        console.log('i fired')
     } else {
         guessField.disabled = false;
-        console.log('no i fired')
     }
 
-
-    guessSubmit.disabled = true;
+    if (!guessSubmit.disabled) {
+        guessSubmit.disabled = true;
+    } else {
+        guessSubmit.disabled = false;
+    }
 }
