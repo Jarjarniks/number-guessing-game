@@ -11,8 +11,8 @@ let numGuesses = 1;
 let currentGuess;
 
 function checkGuess() {
-    const userGuess = Number(guessField.value)
-    currentGuess = userGuess; 
+    const userGuess = Number(guessField.value);
+    currentGuess = userGuess;
 
     if (userGuess === numberToGuess) {
         gameStates.correctGuess()
@@ -26,7 +26,7 @@ guessSubmit.addEventListener("click", checkGuess)
 
 const gameStates = {
     correctGuess: function() {
-        latestGuess.textContent = "You guessed right!"
+        latestGuess.textContent = `You guessed right! The correct number was ${currentGuess}`
         lowOrHi.textContent = `It took you ${numGuesses} guesses!`
         const resetButton = document.createElement("button")
         resetButton.textContent = "Reset game";
@@ -60,3 +60,15 @@ const gameStates = {
         console.log('i fired')
     }
 }
+
+/*  const userGuess = Number(guessField.value)
+    currentGuess = userGuess; 
+
+    if (userGuess === numberToGuess) {
+        gameStates.correctGuess()
+    } else {
+        gameStates.wrongGuess()
+    }
+    numGuesses++; 
+    working checkGuess function
+    */
