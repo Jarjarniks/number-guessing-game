@@ -14,8 +14,11 @@ let currentGuess;
 function checkGuess() {
     const userGuess = Number(guessField.value);
     currentGuess = userGuess;
+    /* add check for more than 10 guesses */
 
-    if (userGuess === numberToGuess) {
+    if (numGuesses > 10) {
+        console.log('you lose!')
+    } else if (userGuess === numberToGuess) {
         gameStates.correctGuess()
     } else {
         gameStates.wrongGuess()
