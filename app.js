@@ -14,10 +14,9 @@ let currentGuess;
 function checkGuess() {
     const userGuess = Number(guessField.value);
     currentGuess = userGuess;
-    /* add check for more than 10 guesses */
 
     if (numGuesses > 10) {
-        console.log('you lost');
+        gameStates.loseGame();
     } else if (userGuess === numberToGuess) {
         gameStates.correctGuess()
     } else {
@@ -51,7 +50,7 @@ const gameStates = {
         }
     },
     loseGame: function() {
-        
+        resultParas.appendChild(resetBtn());
     },
     resetGame: function() {
         numGuesses = 1;
@@ -74,17 +73,3 @@ function resetBtn() {
     resetButton.addEventListener('click', gameStates.resetGame);
     return resetButton;
 }
-
-/* working correctGuess
-        const newLi = document.createElement('li');
-        newLi.textContent = `${currentGuess}`;
-        newLi.className = 'green'
-        guessList.appendChild(newLi);
-        latestGuess.textContent = `You guessed right! The correct number was ${currentGuess}`
-        lowOrHi.textContent = `It took you ${numGuesses} guesses!`
-        const resetButton = document.createElement("button")
-        resetButton.textContent = "Reset game";
-        resetButton.classList.add("resetBtn");
-        resultParas.appendChild(resetButton);
-        resetButton.addEventListener('click', gameStates.resetGame); 
-        */
